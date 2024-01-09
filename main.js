@@ -6,13 +6,15 @@ function cats(arr){
     return newArr
 }
 
-function catsTwo(arr){
-    let newArr = []
-    for(let i = 0; i < arr.length; i++){
-        newArr.push(arr[i]**2)
+function catsTwo(beans){
+    let thing = beans.split(" ")
+    console.log(thing)
+    let newBeans = []
+    for(let i = 0; i < thing.length; i++){
+        newBeans.push(thing[i])
     }
-    return newArr
+    return newBeans
 }
 
 
-document.getElementById("cheese").innerHTML = cats([1,2,3,4,5,6,7,8,9,10])
+document.getElementById("cheese").innerHTML = catsTwo('this is way too many beans for my cup of coffee')

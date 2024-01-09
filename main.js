@@ -7,16 +7,18 @@ function cats(arr){
 }
 
 function catsTwo(beans){
-    let thing = beans.split(" ")
-    console.log(thing)
-    let newBeans = []
-    for(let i = 0; i < thing.length; i++){
-        if(thing[i] === 'is'){
-            newBeans.push('not')
-        }
-        newBeans.push(thing[i])
+    const thing = beans.split(" ")
+
+    const whereIsIt = thing.indexOf('is');
+
+    if(whereIsIt !== -1 ){
+        thing.splice(whereIsIt + 1, 0, 'not');
+
     }
-    return newBeans
+
+    const result = thing.join(' ');
+
+    return result 
 }
 
 

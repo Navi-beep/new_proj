@@ -11,6 +11,9 @@ function catsTwo(beans){
     console.log(thing)
     let newBeans = []
     for(let i = 0; i < thing.length; i++){
+        if(thing[i] === 'is'){
+            newBeans.push('not')
+        }
         newBeans.push(thing[i])
     }
     return newBeans

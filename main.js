@@ -22,4 +22,4 @@ function catsTwo(beans){
 }
 
 
-document.getElementById("cheese").innerHTML = catsTwo('this is way too many beans for my cup of coffee')
+document.getElementById("cheese").innerHTML = catsTwo('this is way too many beans for my cup of coffee dang it')

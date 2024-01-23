@@ -22,4 +22,12 @@ function catsTwo(beans){
 }
 
 
+function catsThree(arr){
+    let newArr = []
+    for(let i = 0; i < arr.length; i++){
+        newArr.push(arr[i]*2)
+    }
+    return newArr
+}
+
 document.getElementById("cheese").innerHTML = catsTwo('this is way too many beans for my cup of coffee dang it, what in the heck')

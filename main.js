@@ -42,4 +42,57 @@ function birdo(arr){
 console.log(birdo([1,2,3,4,5,6,7,8,9]))
 
 
+function pairElement(str) {
+    let newStrand = [];
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] == "G") {
+        newStrand.push([str[i], "C"]);
+      }
+      if (str[i] == "C") {
+        newStrand.push([str[i], "G"]);
+      }
+      if (str[i] == "A") {
+        newStrand.push([str[i], "T"]);
+      }
+      if (str[i] == "T") {
+        newStrand.push([str[i], "A"]);
+      }
+    }
+    console.log(newStrand);
+    return newStrand;
+  }
+  
+  //document.getElementById("DNA").innerHTML = pairElement("GCG");
+  
+  
+  function pairElement2(str) {
+    // Function to match each character with the base pair
+    const matchWithBasePair = function(char) {
+      switch (char) {
+        case "A":
+          return ["A", "T"];
+        case "T":
+          return ["T", "A"];
+        case "C":
+          return ["C", "G"];
+        case "G":
+          return ["G", "C"];
+      }
+    };
+  
+    // Find pair for every character in the string
+    const pairs = [];
+    for (let i = 0; i < str.length; i++) {
+      pairs.push(matchWithBasePair(str[i]));
+    }
+    console.log(pairs)
+    return pairs;
+  }
+  
+  
+  
+  
+  document.getElementById("DNA2").innerHTML = pairElement2("GCG");
+  
+
 document.getElementById("cheese").innerHTML = catsTwo('this is way too many beans for my cup of coffee dang it, what in the heck')

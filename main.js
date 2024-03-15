@@ -89,9 +89,31 @@ function pairElement(str) {
     return pairs;
   }
   
+  function sumPrimes(num) {
+  
+    function isPrime(num) {
+      const sqrt = Math.sqrt(num);
+      for (let i = 2; i <= sqrt; i++) {
+        if (num % i === 0)
+          return false;
+      }
+      return true;
+    }
   
   
+    let sum = 0;
+    for (let i = 2; i <= num; i++) {
+      if (isPrime(i))
+        sum += i;
+    }
+    return sum;
+  }
   
+  document.getElementById("what").innerHTML = sumPrimes(977);
+  
+  
+
+
   document.getElementById("DNA2").innerHTML = pairElement2("GCG");
   
 
